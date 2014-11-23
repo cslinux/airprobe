@@ -42,7 +42,7 @@ class gsm_receiver_cf;
 typedef boost::shared_ptr<gsm_receiver_cf> gsm_receiver_cf_sptr;
 typedef std::vector<gr_complex> vector_complex;
 
-gsm_receiver_cf_sptr gsm_make_receiver_cf(gr_feval_dd *tuner, gr_feval_dd *synchronizer, int osr, std::string key, std::string configuration);
+gsm_receiver_cf_sptr gsm_make_receiver_cf(gr::feval_dd *tuner, gr::feval_dd *synchronizer, int osr, std::string key, std::string configuration);
 
 /** GSM Receiver GNU Radio block
  *
@@ -120,7 +120,7 @@ class gsm_receiver_cf : public gr_block
     // GSM Stack
     GS_CTX d_gs_ctx;//TODO: remove it! it'a not right place for a decoder
 
-    friend gsm_receiver_cf_sptr gsm_make_receiver_cf(gr_feval_dd *tuner, gr_feval_dd *synchronizer, int osr, std::string key, std::string configuration);
+    friend gsm_receiver_cf_sptr gsm_make_receiver_cf(gr::feval_dd *tuner, gr::feval_dd *synchronizer, int osr, std::string key, std::string configuration);
     gsm_receiver_cf(gr_feval_dd *tuner, gr_feval_dd *synchronizer, int osr, std::string key, std::string configuration);
 
     /** Function whis is used to search a FCCH burst and to compute frequency offset before

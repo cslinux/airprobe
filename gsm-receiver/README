@@ -1,3 +1,6 @@
+GNU Radio 3.7 users must install grcompat from here:
+https://github.com/guruofquality/grcompat
+
 Usage:
  -capture cfile with usrp:
     $ capture.sh <frequency>

@@ -289,7 +289,7 @@ typedef std::vector<float> vector_float;
 typedef boost::circular_buffer<float> circular_buffer_float;
 
 gsm_receiver_cf_sptr
-gsm_make_receiver_cf(gr_feval_dd *tuner, gr_feval_dd *synchronizer, int osr, std::string key, std::string configuration)
+gsm_make_receiver_cf(gr::feval_dd *tuner, gr::feval_dd *synchronizer, int osr, std::string key, std::string configuration)
 {
   return gsm_receiver_cf_sptr(new gsm_receiver_cf(tuner, synchronizer, osr, key, configuration));
 }
