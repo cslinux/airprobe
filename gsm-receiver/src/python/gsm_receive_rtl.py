@@ -95,8 +95,7 @@ class top_block(grc_wxgui.top_block_gui):
 
     self.output = blocks.file_sink(gr.sizeof_float, options.output_file)
 
-    #self.connect(self.src, self.tuner, self.interpolator, self.receiver, self.converter, self.output)
-    self.connect(self.src, self.tuner, self.interpolator)
+    self.connect(self.src, self.tuner, self.interpolator, self.receiver, self.converter, self.output)
 
     def set_ifreq(ifreq):
         self.ifreq = ifreq

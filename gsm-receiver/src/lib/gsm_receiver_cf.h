@@ -52,7 +52,7 @@ gsm_receiver_cf_sptr gsm_make_receiver_cf(gr::feval_dd *tuner, gr::feval_dd *syn
  * \ingroup block
  */
 
-class gsm_receiver_cf : public gr_block
+class gsm_receiver_cf : public gr::block
 {
   private:
     std::map<char,int> d_hex_to_int;
